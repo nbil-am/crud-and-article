@@ -1,6 +1,6 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-        if(empty($_POST["title"])&&empty($_POST["description"])) {
+        if(empty($_POST["title"]) || empty($_POST["description"])) {
             header("Location:dashboard.php");
             exit;
         }

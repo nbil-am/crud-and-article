@@ -1,7 +1,7 @@
 <?php 
 include("database/conn.php");
 session_start();
-    if(!isset($_SESSION["username"]) && !isset($_SESSION["email"]) && !isset($_SESSION["uuid"]) ) {
+    if(!isset($_SESSION["username"]) || !isset($_SESSION["email"]) || !isset($_SESSION["uuid"]) ) {
         header("Location:index.php");
     }
     $username = $_SESSION["username"];
